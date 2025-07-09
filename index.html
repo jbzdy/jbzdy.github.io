@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JBZD.com.pl - Najgorsze obrazki w sieci</title>
+  <style>
+    html, body { margin:0; padding:0; height:100%; }
+    iframe { width:100%; height:100%; border:none; display:block; }
+  </style>
+</head>
+<body>
+  <iframe src="https://jbzd.com.pl/"></iframe>
+  <script>
+    setTimeout(() => { 
+		(() => {
+  const e = document.querySelector('#screen_container, #screen, .vga');
+  if (!e) {
+    console.warn('Element not found');
+    return;
+  }
+  const fn = e.requestFullscreen 
+    || e.webkitRequestFullscreen 
+    || e.mozRequestFullScreen 
+    || e.msRequestFullscreen;
+  fn.call(e);
+})();
+		 }, 300);
+  </script>
+</body>
+</html>
